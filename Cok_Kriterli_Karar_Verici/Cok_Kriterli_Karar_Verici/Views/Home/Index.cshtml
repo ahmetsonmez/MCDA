@@ -1,0 +1,602 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MasterPage.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="portlet">
+        <div class="portlet-title">
+            <div class="caption" style="font-family:'Segoe UI';">
+                <h3> Uygulamalar</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="top-news">
+        <a href="~/Home/Ahp" class="btn blue">
+            <span>
+              AHP + TOPSIS + VIKOR
+            </span>
+            <em>
+                <i class="fa fa-sitemap"></i>
+                Multiple Criteria Decision Making
+            </em>
+            <i class="fa fa-globe top-news-icon"></i>
+        </a>
+    </div>
+
+</div>
+
+
+    <div class="col-md-12">
+    <div class="portlet" style="font-family:'Segoe UI';">
+        <div class="portlet-title">
+            <div class="caption">
+                <h3> Hakkında</h3>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="col-md-4">
+        <ul class="ver-inline-menu tabbable margin-bottom-10">
+
+            <li class="active">
+                <a data-toggle="tab" href="#tab_1">
+                    <i class="fa fa-cubes"></i>MCDA
+                </a>
+                <span class="after">
+                </span>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#tab_2">
+                    <i class="fa fa-sitemap"></i>AHP
+                </a>
+                <span class="after">
+                </span>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#tab_3">
+                    <i class="fa fa-plus-square"></i>TOPSIS
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#tab_4">
+                    <i class="fa fa-leaf"></i>VIKOR
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#tab_5">
+                    <i class="fa fa-info"></i>Uygualama Hakkında
+                </a>
+            </li>           
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <div class="tab-content">
+            <div id="tab_1" class="tab-pane active">
+                <div id="accordion1" class="panel-group">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_1">
+                                    1. Çok Kriterli Karar Verme
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion1_1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p style="text-align:justify">
+                                    Karar verme, genel olarak seçenek kümesinden, en az bir amaç doğrultusunda ve  bir ölçüte dayanarak en uygun, mümkün bir ya da birkaç seçeneği seçme sürecidir.
+                                    Buna göre karar verme süreci karar verici, seçenekler, ölçütler, çevresel etkiler, karar vericinin öncelikleri ve kararın sonuçları elemanlarını içerir. Süreç, karar
+                                    vericinin mevcut seçenekler arasından bir seçim, sıralama ya da sınıflandırma yapması şeklinde bitebilir. Bu aşamada en doğru kararı vermek için çok ölçütlü
+                                    karar verme yöntemleri karşımıza çıkmaktadır. Belirli kriterlerin genel olarak ikili karşılaştırmalarının esas alındığı çok ölçütlü karar verme yöntemleri en doğru
+                                    kararın verilmesine sayısal verilerle yardımcı olmaktadır(Evren ve Ülengin, 1992).
+                                </p>
+                                <p style="text-align:justify">
+                                    T.L. Saaty kararı (karar verme süreçlerini) ikiye ayırmaktadır: "Sezgisel" ve "Analitik". Sezgisel kararlar, verilerle desteklenmez ve genelde keyfi bir biçimde verilirler.
+                                    Bazı basit, derinliği olmayan karar durumlarında sezgisel yaklaşım başarılı olabilir. Ancak, bilgi gerektiren karmaşık karar durumları ile karşılaşıldığında, karar vericiler sonuçta
+                                    verdikleri kararların kendi değer yargılarından sapmalar gösterdiğini görebilirler. Bu sapmaların görülmediği durumlar için "iyi karar verme" ifadesi kullanılmaktadır. Kişinin
+                                    sezgisel gücünü vurgulamak anlamında iyi karar verme, bir "sanat" olarak görülmüştür. (Yetkin Çınar - S16)
+                                </p>
+
+
+
+                                <p style="text-align:justify">
+                                    "İyi" ya da "rasyonel" karar verme sadece insana has bir özelliktir. Dolayısıyla, insan,karşısına çıkan ve giderek daha karmaşık bir hal alan karar problemlerinde iyi kararlar
+                                    verebilmek için sürekli olarak yollar ve araçlar geliştirmektedir. <b>
+                                        İşte Çok Kriterli Karar Verme süreçleri, karmaşık karar problemlerini bilimsel ve analitik bir çerçevede ele alarak
+                                        karar vericiye en çok istediği çözüme ulaşmasında yardımcı olmaya çalışan prosedürler bütünü olarak ortaya çıkmıştır.
+                                    </b>
+                                </p>
+                                <p style="text-align:justify">
+                                    Çok Kriterli Karar Verme (kısaca ÇKKV) (Multiple Criteria Decision Making_MCDM), en kısa tanımıyla; "Çoklu ve birbiriyle çatışan amaçların (kriterlerin)
+                                    gerçekleştirilmek istendiği problemlerin çözümü"ne verilen genel isimdir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_2">
+                                    2. Çok Kriterli Karar Verme Süreci Aşamaları
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion1_2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        Amaçların Belirlenmesi
+                                        <ul>
+                                            <li>Amaçlar, belli, üzerinde uzlaşılmış, gerçekçi, zamana bağlı, ve ölçülebilir olmalıdır.</li>
+                                            <li>Farklı zaman dilimleri için farklı amaçlar belirlenebilir.</li>
+                                            <li>Yakın, orta ve uzun vade arasında farklılıklar gözetilerek, aynı konuda farklı problemler kurulabilir. </li>
+                                            <li>Örnek olarak; amacımız araba almak ise, kullanım ve maliyet bakımından en memnun kalınacak arabayı seçmek. </li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li>
+                                        Kriterlerin Oluşturulması
+                                        <ul>
+                                            <li>Kapsayıcı olmalıdır: kriterlerin düzeyi bilinirse, amaca ne kadar ulaşıldığı anlaşılır.</li>
+                                            <li>Ölçülebilir olmalıdır: karar vericinin öncelikleri kriterin her düzeyi için ölçülebilmelidir. </li>
+                                            <li>Yeterli olmalıdır: Kriterler birden fazla tekrar ederek sonucu etkilememelidir. </li>
+                                            <li>Minimal olmalıdır: Karar problemi, mümkün olan en basit şekilde ifade edilmelidir</li>
+                                            <li>
+                                                Örnek : Araba Alımı
+                                                <ul>
+                                                    <li>Performans (beygir­güç, 0­100 km.hızlanma) </li>
+                                                    <li>Estetik (iç, dış, renk) </li>
+                                                    <li>Kullanım kolaylığı (sürüş, iç mekan kullanımı, teknolojik düzey) </li>
+                                                    <li>Maliyet (satış fiyatı, satış koşulları, yakıt tüketimi) </li>
+                                                    <li>Güvenlik (çarpma testi sonuçları)</li>
+                                                </ul>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Alternatiflerin Belirlenmesi
+                                        <ul>
+                                            <li>Amaca Göre Gelişmeye Yönelik Olmalıdır</li>
+                                            <li>Birçok alternatif zaten önceden bellidir. </li>
+                                            <li>Amaçlara ve kriterlere göre yeni alternatifler de yaratılabilir</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Alternatiflerin Kriterlere Göre Değerlendirilmesi
+                                        <ul>
+                                            <li>Her alternatif, her kriter üzerinden değerlendirilir. </li>
+                                            <li>Numerik olmayan tercihler de numerik değerlendirmeye dönüştürülebilir. </li>
+                                            <li>Bazı metodlarda da alternatifler kriterler üzerinden ikili karşılaştırma ile değerlendirilir.</li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        Genel Değerlendirme ve Karar
+                                        <ul>
+                                            <li>Alternatiflerin birbirlerine göre önemleri (ağırlıkları) saptanır.</li>
+                                            <li>
+                                                Bir alternatifin toplam puanı, o alternatiflerin kriterler üzerinden aldığı puanların toplamıdır.(Toplam puan = Performans puanı + estetik puanı + 
+                                                kullanım kolaylığı puanı + maliyet puanı) 
+                                            </li>
+                                            <li>Analizden gelen sonuç karar vericinin değerlendirmesine sunulur.</li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        Kararın İncelenmesi ve Geri Dönüm 
+                                        <ul>
+                                            <li>Karar vericinin değerlendirmesiyle gerekli noktalarda değişiklikler yapılır. </li>
+                                            <li>Duyarlılık analizi özellikle yakın sonuçlarda hangi kriter puan değeri değişikliklerinde sonucun yani seçimin farklılaşacağını gösterir</li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_3">
+                                    3. Çok Kriterli Karar Verme Amacı  ve Faydaları
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion1_3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Karmaşık ve bütünüyle algılaması güç konuları analiz etmek</li>
+                                    <li>Karar verme süreçlerini sistematik bir şekilde yürütmek</li>
+                                    <li>Şeffaf ve hesabı verilebilir bir yönetim </li>
+                                    <li>Birden çok karar vericinin bulunduğu ortamlarda ortak bir platform yaratmak, iletişimi kolaylaştırmak, müzakereleri mümkün kılmak</li>
+                                    <li>Alternatiflerin kriter değerlendirmelerinde gereken uzman görüşleri ile karar vericilerin öznel değerlendirmeleri birleştirmek</li>
+                                    <li>Çok büyük miktardaki veya dağınık veriyi değerlendirmeye almak </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_4">
+                                    4. Çok Kriterli Karar Verme Sorunları
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion1_4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Öznel değerlendirme farklı zamanlarda farklı sonuçlar verebilir.</li>
+                                    <li>Grup kararları ve müzakerelerdeki sorunları tek başına çözmez</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="tab_2" class="tab-pane">
+                <div id="accordion2" class="panel-group">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_1">
+                                    1. Analitik Hiyerarşi Süreci  Nedir?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion2_1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p style="text-align:justify">
+                                    AHP yöntemi, problemin sistem yaklaşımı ile birlikte bir bütün olarak ele alındığı ve her faktörün ana hedefe
+                                    olan katkısının ayrı ayrı değerlendirildiği en çok tercih edilen çok kriterli değerlendirme yöntemlerinden
+                                    biridir.
+                                </p>
+
+                                <img src="~/assets/global/img/d300f-e1.jpg" />
+
+                                <p style="text-align:justify;margin-top:15px">
+                                    Saaty tarafından 1980 yılında, insanoğlunun beyin kapasitesinin, karmaşık kararların etkin ve sezgisel bir
+                                    şekilde sentezini gerçekleştirmeye yeterli olmadığı yaklaşımından hareketle ortaya atılan bu yöntem, kişileri
+                                    nasıl karar vermeleri konusunda bir yöntem kullanmaya zorunlu kılmak yerine; onlara kendi karar verme
+                                    mekanizmalarını tanıma olanağı sağlayıp, bu şekilde daha iyi kararlar vermelerini amaçlamaktadır.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_2">
+                                    2.  Analitik Hiyerarşi Süreci Özellikleri
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion2_2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Birebir değerlendirerek alternatifleri sıralamaya dayanan çok kriterli karar verme yöntemidir.</li>
+                                    <li>Amaçlar ve altamaçlar içiçe katmanlar halinde ve bir hiyerarşi içinde tanımlanır.</li>
+                                    <li>
+                                        AHP problemleri en az üç katman halinde tanımlanır.
+                                        <ul>
+                                            <li>Amaç (tekil): En iyi arabayı seçmek</li>
+                                            <li>Kriterler: Performans, maliyet, güvenlik, görünüm... </li>
+                                            <li>Alternatifler: Alınması muhtemel arabalar</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Karar verici
+                                        <ul>
+                                            <li>Her alternatifin her kriterde ne kadar ‘başarılı’ olduğunu değerlendirir. </li>
+                                            <li>Her kriterin amaca ulaşmadaki görece önemini değerlendirir.  </li>
+                                            <li>Yukarıdaki ikisini sentez yaparak her alternatifin amaca ulaşmadaki başarısını değerlendirir.</li>
+                                            <li>
+                                                Hiçbir zaman kesin (belli değerlerle) değerlendirmeler yapmaz. Değerlendirmeler göreceli oranlarla yapılır.
+                                                <ul>
+                                                    <li>Güvenlik performanstan 3 kat daha önemlidir.</li>
+                                                    <li>A arabası, B arabasından 2 kat daha güvenlidir. </li>
+                                                </ul>
+                                            </li>
+                                            <li>Bu değerlendirmeler nesnel ve öznel olabilir.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Üçten fazla kriter veya alternatif için tutarlılık sorunu çıkabilir.</li>
+                                    <li>AHP tam tutarlılık (mükemmellik) gerektirmez. Yeterince tutarlılık ister.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_3">
+                                    3. Analitik Hiyerarşi Süreci'nin Kullanıldığı Alanlar 
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion2_3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>İşletmeler için fabrika alanı seçimi, ürün formülasyonu, müşteri memnuniyeti değerlendirmesi, tedarikçi ve satıcı seçimi. </li>
+                                    <li>Her türlü örgüt için bütçelendirme, proje seçimi, eleman terfi ve zam değerlendirmesi, risk analizi. </li>
+                                    <li>Hastanelerde risk saptaması, teşhis analizi. </li>
+                                    <li>Okullarda öğrenci seçimi. </li>
+                                    <li>Orduda yüksek maliyetli silah alımı...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_4">
+                                    4. Analitik Hiyerarşi Süreci'nin Yararları
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion2_4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Kullanması kolaydır, uzmanlık gerektirmez. </li>
+                                    <li>Geniş katılım sağlar.</li>
+                                    <li>İletişimi kolaylaştırır.</li>
+                                    <li>Amacı bir hiyerarşi içinde düşünmek amaca yönelik düşünülmesini sağlar.</li>
+                                    <li>Tutarsızlık ölçülebilir.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_5">
+                                    5. Analitik Hiyerarşi Süreci'nin Aşamaları
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion2_5" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Amacın Oluşturulması. </li>
+                                    <li>Kriterlerin Belirlenmesi.</li>
+                                    <li>Kriter Değerlerinin Girişi</li>
+                                    <li>Hedef Normalizasyonunun Bulunması.</li>
+                                    <li>Alternatiflerin Belirlenmesi.</li>
+                                    <li>Kriterlerin alternatifler ile karşılaştırılması</li>
+                                    <li>Karşılaştırma Normalizasyonlarının Belirlenmesi</li>
+                                    <li>Karar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="tab_3" class="tab-pane">
+                <div id="accordion3" class="panel-group">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_1">
+                                    1. Topsis Technique for Order Preference by Similarity to Ideal Solution
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion3_1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p style="text-align:justify">
+                                    Karar verme sürecinde kullanılan yöntemlerden birisi olan TOPSIS, alternatifler arasından en iyi seçimin yapılmasına imkân tanıyan bir tekniktir. TOPSIS 1981 yılında
+                                    Hwang ve Yoon tarafından geliştirilmiş çok kriterli karar verme(ÇKKV) yöntemlerinden birisidir(Hwang ve Yoon, 1981). TOPSIS kelimesi, Technique for Order Preference by
+                                    Similarity to Ideal Solution kelimelerinin baş harferinden oluşmaktadır.
+                                </p>
+                                <p style="margin-top:15px">
+                                    <img src="~/assets/global/img/topsis.png" width="50%" />
+                                </p>
+
+                                <p style="text-align:justify;margin-top:15px;">
+
+                                    TOPSIS yöntemi kullanıcısından az sayıda girdi parametresi alırken çıktılarının
+                                    anlaşılması oldukça kolaydır. TOPSIS yöntemi ile karar verirken seçilen bir alternati􀃗n
+                                    ideal çözüme yakın olması ve ideal olmayan çözüme(negatif ideal) de uzak olması
+                                    beklenir(Lai ve diğerleri, 1994). Eğer amacımız getiri ise ideal çözüme yakınlık demek
+                                    getirinin maksimizasyonu, negatif ideal çözüme uzaklık ise maliyetin minimizasyonu
+                                    anlamına gelmektedir. Arzulanan alternati􀃗n ideal çözüme yakınlığı beklenirken bir o
+                                    kadar da negatif ideal çözümden uzak olması beklenir. Bir başka ifade ile TOPSİS ile
+                                    alternati􀃘er içinden ideal olan çözüme yakın, negatif ideal çözüme uzak olanı seçilir.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_2">
+                                    2. Topsis Aşamaları
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion3_2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Karar Matrisinin  Oluşturulması</li>
+                                    <li>Standart Karar Matrisinin  Oluşturulması</li>
+                                    <li>Ağırlıklı Standart Karar Matrisinin Oluşturulması</li>
+                                    <li>Pozitif İdeal  ve Negatif İdeal Çözüm Kümelerinin Oluşturulması</li>
+                                    <li>Ayırım Ölçülerinin Hesaplanması</li>
+                                    <li>İdeal Çözüme Göreli Yakınlığın Hesaplanması</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="tab_4" class="tab-pane">
+                <div id="accordion4" class="panel-group">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#accordion4_1">
+                                    1.   VlseKriterijumska Optimizacija I Kompromisno Resenje
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion4_1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p style="text-align:justify">
+                                    VlseKriterijumska Optimizacija I Kompromisno Resenje (VIKOR) yöntemi çok kriterli kompleks sistemlerin optimizasyonu için geliştirilmiştir. Yu (1973) ve Zeleny (1982) tarafından temelleri atılan uzlaşık çözüm (compromise solution), birbiriyle çelişen kriterlerin yer aldığı bir karar verme probleminde ortak bir uzlaşma ile anlaşmaya varmak anlamına gelmekte ve ideale en yakin uygun alternatif çözümü vermektedir. Vikor yöntemi (1997) Trajkovic, Amakumovic ve Opricovic tarafından ortaya koyuldu. Bu yöntem bir dizi alternatifi sıralama ve seçmeye odaklanır ve çelişkili kriterli bir problem için karar vericinin nihai karara ulaşmasına yardımcı uzlaşmacı çözümler belirler.Uzlaşmacı sıralama Vikor yöntemi çoğunluk için maksimum 'grup faydası' ve aleyhinde minimum bireysel pişmanlık sağlayan, ideale yakın, uzlaşılan bir çözüm, belirler. Alternatiflerin her bir kritere göre değerlendirildiği varsayıldığında, uzlaşma sıralaması ideal çözüm yakınlık ölçüsü karşılaştırılarak gerçekleştirilir. Son on yılda, Vikor çok kriterli ve alternatifli gerçek hayat problemlerini ele almada daha popüler bir karar destek aracı haline gelmiştir
+                                </p>
+                                <p style="margin-top:15px">
+                                    <img src="~/assets/img/vikor.png"  />
+                                </p>                             
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#accordion4_2">
+                                    2. Vikor Özellikleri
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion4_2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                               <p>Birbiri ile çelişen kriterler içeren problemler için uzlaşık çözüm, karar vericilere karara ulaşmada yardımcı olur</p>
+                                <p>VIKOR, uzlaşık bir sıralama belirlemeyi ve belirtilen ağırlıklar altında uzlaşık çözüme ulaşmayı sağlayan bir yöntemdir.</p>
+                                <p>Birbiri ile çelişen kriterler altında alternatiflerin sıralamasını belirleyerek en uygununun seçilmesini içerir.</p>
+                                <p>VIKOR yöntemi, ideal çözüme yakınlığa dayanan çok kriterli sıralama indeksini ele alır.</p>
+                                <p>VIKOR yöntemi ilk kez Opricovic ve Tzeng (2004) tarafından karmaşık sistemlerin çok kriterli optimizasyonu için önerilmiştir.</p>
+                                <p>Vise Kriterijumska Optimizacija I Kompromisno Resenje ifadesinin kısaltılmış yazımı olan VIKOR’un dilimizdeki anlamı ise; çok kriterli optimizasyon ve uzlaşık çözümdür.</p>
+                                <p>Tzeng vd. (2005), Taiwan’da toplu taşımada kullanılacak otobüs yakıtlarının değerlendirilmesinde TOPSIS ve VIKOR yöntemlerinden yararlanmışlardır</p>
+                                <p>VIKOR yöntemi, birbiri ile çelişen kriterlerin olması durumunda alternatifler kümesinden birinin seçilmesi ya da alternatiflerin sıralanmasını ele alır.</p>
+                                <p>Her alternatifin her kriter için değerlendirildiği varsayımı altında, ideal alternatife yakınlık değerleri karşılaştırılarak uzlaşık sıralamaya ulaşılır.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#accordion4_3">
+                                    3. VIKOR Yöntemi Kullanılabilmesi için Gerekli Koşullar
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion4_3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>Fikir ayrılıklarının çözüme ulaştırılmasında uzlaşma kabul edilebilir olmalıdır</p>
+                                <p>Karar verici, ideal çözüme en yakın çözümü kabul etmeye istekli olmalıdır.</p>
+                                <p>Karar verici için fayda ile her kriter fonksiyonu arasında doğrusal bir ilişki olmalıdır..</p>
+                                <p>Alternatifler, belirtilen tüm kriterler için değerlendirilmelidir.</p>
+                                <p>Karar vericinin tercihleri ağırlıklar ile ifade edilir olmalıdır.</p>
+                                <p>VIKOR yöntemi, karar vericinin etkileşimli katılımı olmadan başlar, fakat karar verici nihai çözümü onaylamaktan sorumludur. Karar verici, bu nihai çözüme kendi tercihlerini de dahil edebilir.</p>                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#accordion4_4">
+                                    4. VIKOR Yönteminin Adımları
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion4_4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>En İyi (fi*) ve En Kötü (fi-) Değerleri’nin Bulunması
+                                        <ul>
+                                            <li>Vikor yönteminin ilk basamağı olarak en iyi (fi*) ve en kötü (fi-) değerleri belirlenir. Aşağıda gösterilen formüllerde; i karşılaştırma kriterlerini (i=1,2,3,…,n) ve j alternatifleri (j=1,2,3,…,m) göstermektir. Aşağıdaki formüller yardımıyla her bir kriter için en iyi (fi*) ve en kötü (fi-) değerler belirlenir.
+                                            <br /> <img src="~/assets/img/vikor1.jpg" />
+                                            </li>
+                                        </ul>
+                                    </li>
+                                  
+                                    <li>Sj ve Rj Değerleri’nin Hesaplanması
+                                        <ul>
+                                            <li>Her bir kriter için en iyi (fi*) ve en kötü (fi-) değerleri hesaplandıktan sonra her bir alternatif için Sj ve Rj değerleri hesaplanır. aşağıdaki formüllerle hesaplanan Sj değeri ortalama grup, Rj ise en kötü grup değerini gösterir.
+                                            <br /> <img src="~/assets/img/vikor2.jpg" /> </li>
+                                        </ul>
+                                    </li>
+                                    <li>Qj Değerleri’nin Hesaplanması
+                                        <ul>
+                                            <li>Her bir alternatif için aşağıdaki formül yardımıyla değerlendirme kriterlerine göre belirlenen Qj değerleri, maksimum grup faydasını gösterir.
+                                            <br /> <img src="~/assets/img/vikor3.jpg" /><br />
+                                                Yukarıdaki formülde gösterilen S* ve R* minimum Sj ve Rj değerlerini, S- ve R-maksimum Sj ve Rj değerlerini göstermektedir. Kullanılan formüldeki v değeri
+                                                maksimum grup faydasını yaratacak strateji için ağırlık değerini, fakat (1-v) değeri ise karşıt görüşteki karar vericilerin minimum pişmanlığını ifade
+                                                etmektedir. Vikor yönteminde maksimum grup faydası için v > 0,5 çoğunluk tercihini, v=0,5 konsesusu (uyuşma) ve v < 0,5 vetoyu temsil etmektedir ve bu v
+                                                değeri grup kararı ile belirlenmektedir.<br />
+                                            </li>
+                                        </ul></li>
+                                    <li>Sj, Rj ve Qj Değerleri’nin Sıralanması
+                                        <ul>
+                                            <li>Her bir alternatif için hesaplanan Sj, Rj ve Qj değerleri küçükten büyüğe olacak şekilde sıralanır.</li>
+                                        </ul></li>
+                                    <li>Kabul Edilebilir Avantaj (C1) ve Kabul Edilebilir İstikrar (C2)Kümelerinin Belirlenmesi
+                                        <ul>
+                                            <li>Sj, Rj ve Qj değerlerinin sıralaması göre karar vericiler için kabul edilebilir avantaj (C1) ve kabul edilebilir istikrar (C2) kümeleri belirlenir. Herhangi bir alternatifin C1 (Kabul Edilebilir Avantaj) kümesinde yer alabilmesi için aşağıdaki formülde gösterilen koşulu sağlaması gerekir.<br /><img src="~/assets/img/vikor4.jpg" /><br />
+                                                Gösterilen formüldeki DQ değeri, m alternatif sayısı olmak üzere (1/(1-m)) ile hesaplanır. Qj sıralamasına göre A2 alternatifi A1 alternatifinden sonraki sırada yer alıyorsa ve (13) numaralı formülde gösterilen koşul sağlanıyorsa A1 karar noktası C1 grubunda yer alır. Bu hesaplama yöntemi tüm Qj değerlerine uygulanıp alternatiflerin hangilerinin C1 kümesinde olup olmadığı tespit edilir. Kabul edilebilir istikrar (C2) kümesi ise Sj, Rj ve Qj sıralamalarının tamamında aynı sırada yer alan alternatiflerden oluşur. C1 ve C2 kümelerinin her ikisinde yer alan alternatifler sıralama mantığına göre istikrarlı karar noktalarını gösterir. </li>
+                                        </ul>
+                                    </li>
+                                   
+                                </ul>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="tab_5" class="tab-pane">
+                <div id="accordion5" class="panel-group">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion5" href="#accordion5_1">
+                                    1. Uygulama Hakkında    
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="accordion5_1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p style="text-align:justify">
+                                   MCDA uygulaması, Sakarya Üniversitesi Fen Bilimleri Enstitüsü Bilişim Sistemleri Ana Bilim Dalı Uzaktan Tezsiz Yüksek Lisans programında "Proje Ödevi" için hazırlanmıştır. 
+                                    
+                                   Asp.Net MVC platformu üzerinde, Jquery,HTML5,CSS3 ve Bootstrap kullanılarak geliştirilmiştir.
+                                </p>
+                                <p style="margin-top:15px">
+                                    <img src="~/assets/img/bootstrap-jquery-html5-css3.png" width="30%" height="30%" />
+                                </p>
+
+                                <p style="text-align:justify;margin-top:15px;">
+                                    <img src="~/assets/img/ahmetsonmez.jpg" />
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                 
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+

@@ -1,0 +1,599 @@
+﻿
+@{
+    ViewBag.Title = "Ahp";
+    Layout = "~/Views/Shared/MasterPage.cshtml";
+}
+
+<style>
+    p{
+
+        text-align:justify;
+        font-family:Calibri;
+        font-size:14px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet box blue" id="form_wizard_1">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-list"></i> AHP  / Topsis / Vikor <span class="step-title">
+                        Step 1 of 10
+                    </span>
+                </div>
+
+            </div>
+            <div class="portlet-body form">
+                <form action="#" class="form-horizontal" id="submit_form" method="POST">
+                    <div class="form-wizard">
+                        <div class="form-body">
+                            <ul class="nav nav-pills nav-justified steps">
+                                <li>
+                                    <a href="#tab1" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            1
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Hedef Oluştur
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab2" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            2
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Hedef Kriterleri
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab3" data-toggle="tab" class="step active">
+                                        <span class="number">
+                                            3
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Kriter Değerleri
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab4" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            4
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Hedef Normalizasyonu
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab5" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            5
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Alternatifler
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#tab6" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            6
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Alternatif Karşılaştırma
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#tab7" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            7
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Alternatif Normalizasyon
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#tab8" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            8
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> AHP Sonuç
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#tab9" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            9
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Topsis
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#tab10" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            10
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Vikor
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <div id="bar" class="progress progress-striped" role="progressbar">
+                                <div class="progress-bar progress-bar-success">
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="alert alert-success display-none">
+                                    <button class="close" data-dismiss="alert"></button>
+                                    Your form validation is successful!
+                                </div>
+                                <div class="tab-pane active" id="tab1">
+
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <br />
+                                            <div class="col-md-6 col-md-offset-4">
+                                                <div class="col-md-8">
+                                                    <input type="text" style="width:100%;display:block" name="fullname" id="txtYeniHedef" autofocus placeholder="Yeni Hedefinizi Yazınız..." class="form-control input-lg">
+                                                </div>                                               
+                                            </div>
+
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane" id="tab2">
+                                    <div class="form-body" id="YeniKriterlerPaneli">
+                                        <div class="form-group">
+                                            <div class="col-md-6  col-md-offset-3">
+                                                <div class="col-md-12">
+                                                    <div class="col-md-12">
+                                                        <a id="adder" onclick="addInput();" class="btn default blue-stripe"><i class="fa fa-plus"></i> Kriter Ekle </a>
+                                                    </div>
+                                                    <div id="inputs" class="col-md-12">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="tab3">
+
+
+                                    <div class="form-body" id="tblKriterHesapla">
+                                        <div class="form-group">
+                                            <div class="col-md-12">                                             
+                                                    <a href="javascript:;" class="btn btn-icon-only grey" data-toggle="popover" id="ahpFormul1" ><i class="fa fa-info"></i></a>                                                  
+                                                <table class="table table-striped table-bordered table-hover" id="tblKriterAgirlik"></table>
+                                            </div>
+                                            <div class="col-md-12" style="margin-top:15px;">
+
+                                                <button class="btn grey-cascade btn-block" id="btnNormalizasyon" onclick="Normalizasyon();" type="button">Normalizasyon Hesapla</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab4">
+                                    <div class="form-body">
+                                        <div class="form-group">
+
+                                            <div class="col-md-12">
+                                                <a href="javascript:;" class="btn btn-icon-only grey" data-toggle="popover" id="ahpinfo1"><i class="fa fa-info"></i></a> - 
+                                                <a href="javascript:;" class="btn btn-icon-only grey" data-toggle="popover" id="ahpinfo12"><i class="fa fa-info"></i></a>
+                                                <table class="table table-striped table-bordered table-hover" id="tblNormalizasyon"></table>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="btn-set pull-right" style="margin-top:5px;">
+                                                    <label id="TutatlilikOrani"></label>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="col-md-5  col-md-offset-3">
+                                                <div class="col-md-12">
+                                                    <div id="chartContainer" style="height: 300px; width: 100%;">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane active" id="tab5">
+
+                                    <div class="form-body" id="alternatifler">
+                                        <div class="form-group">
+                                            <div class="col-md-6  col-md-offset-3">
+                                                <div class="col-md-12">
+                                                    <div class="col-md-12">
+                                                        <a id="adder" onclick="addAlternatif();" class="btn default blue-stripe"><i class="fa fa-plus"></i> Alternatif Ekle </a>
+                                                    </div>
+                                                    <div id="Alternatifinputs" class="col-md-12">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="tab6">
+
+
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <a href="javascript:;" class="btn btn-icon-only grey" data-toggle="popover" id="ahpinfo2"><i class="fa fa-info"></i></a>
+                                            </div>
+                                            <div class="col-md-12" id="alternatifTablolar">
+
+                                            </div>
+
+                                            <div class="col-md-12" style="margin-top:15px;">
+
+                                                <button class="btn grey-cascade btn-block" id="btnNormalizasyon" onclick="AlternatifNormalizasyon();" type="button">Normalizasyon Hesapla</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="tab7">
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <a href="javascript:;" class="btn btn-icon-only grey" data-toggle="popover" id="ahpinfo3"><i class="fa fa-info"></i></a>
+                                            </div>
+                                            <div class="col-md-12" id="tblAlternatifNormalizasyonTablolar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="tab8">
+                                    <div class="form-body">
+                                        <div class="form-group">
+
+                                            <div class="col-md-12">
+                                                <div class="portlet">
+                                                    <div class="portlet-title">
+                                                        <div class="caption">
+                                                         Ahp Sonucu 
+    <a href="javascript:;" class="btn btn-icon-only grey" data-toggle="popover" id="ahpinfo4"><i class="fa fa-info"></i></a>
+
+                                                        </div>
+                                                        <div class="tools">
+                                                            <a href="javascript:;" class="collapse" data-original-title="" title="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                  
+                                                    <div class="portlet-body" style="display: block;">
+                                                        <div class="col-md-12" id="Karar">
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                                </div>
+
+
+                                                <hr />
+
+                                                <div class="col-md-5  col-md-offset-3">
+                                                    <div class="col-md-12" style="display:none;">
+                                                        <div id="kararGrafikAlani" style="height: 300px; width: 100%;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="tab9">
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="portlet">
+                                                    <div class="portlet-title">
+                                                        <div class="caption">
+                                                           Topsis Yöntemi ile Hesaplama 
+                                              <a href="javascript:;" class="btn btn-icon-only grey" data-toggle="popover" id="topsisinfo1"><i class="fa fa-info"></i></a>
+                                                        </div>
+                                                        <div class="tools">
+                                                            <a href="javascript:;" class="collapse" data-original-title="" title="">
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="portlet-body">
+
+
+                                                        <div class="col-md-4">
+                                                            <div class="top-news">
+                                                                <a href="javascript:;" onclick="AhpTopsisKriterleriKaydet();" class="btn blue">
+                                                                    <span>
+                                                                        Topsis ile Hesapla
+                                                                    </span>
+                                                                    <em>
+                                                                        <i class="fa fa-plus"></i>
+                                                                        Aynı alternatif, kriter ve ağırları üzerinden topsis için hesapla.
+                                                                    </em>
+                                                                    <i class="fa fa-globe top-news-icon"></i>
+                                                                </a>
+                                                            </div>
+
+                                                        </div>                                                        
+
+                                                        <div class="col-md-12" style="margin-top:20px;">
+                                                     <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="topsisinfo2"><i class="fa fa-info"></i></a>
+                                                            <table class="table table-striped table-bordered table-hover" id="tblAhpTopsis"></table>
+                                                        </div>
+
+                                                        <div class="col-md-12" style="display:none;" id="btnAhpTopsis">
+
+                                                            <button class="btn grey-cascade btn-block" id="btnAhpTopsisNormalizasyon" onclick="AhpTopsisNormalizasyon(); AhpTopsisAgirNormalizasyon(); AhpTopsisUzaklikBul(); AhpTopsisSonuc();" type="button"> Topsis Hesapla </button>
+
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top:10px;">
+                                                            <table class="table table-striped table-bordered table-hover" id="tblAhpTopsisKaresi"></table>
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top:10px;">
+                                                   <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="topsisinfo3"><i class="fa fa-info"></i></a>
+                                                            <table class="table table-striped table-bordered table-hover" id="tblAhpTopsisNorm"></table>
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top:15px;">
+                                                 <a href="javascript:;"  style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="topsisinfo4"><i class="fa fa-info"></i></a>
+                                                            <table class="table table-striped table-bordered table-hover" id="tblAhpAgirlikliNormalizasyon"></table>
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top:15px;">
+                                                    <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="topsisinfo5"><i class="fa fa-info"></i></a>
+                                                            <table class="table table-striped table-bordered table-hover" id="tblAhpIdeal"></table>
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top:15px;">
+                                                  <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="topsisinfo6"><i class="fa fa-info"></i></a>
+                                                            <table class="table table-striped table-bordered table-hover" id="tblAhpUzaklik"></table>
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top:15px;">
+                                                          
+                                                            <table class="table table-striped table-bordered table-hover" id="tblAhpUzaklikNegatif"></table>
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top:15px;">
+                                                 <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="topsisinfo7"><i class="fa fa-info"></i></a>
+                                                            <table class="table table-striped table-bordered table-hover" id="tblAhpSonuc"></table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="tab-pane" id="tab10">
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="portlet">
+                                                    <div class="portlet-title">
+                                                        <div class="caption">
+                                                         Vikor Yöntemi ile Hesaplama <a href="javascript:;" class="btn btn-icon-only grey" data-toggle="popover" id="vikorinfo1"><i class="fa fa-info"></i></a>
+                                                        </div>
+                                                        <div class="tools">
+                                                            <a href="javascript:;" class="collapse" data-original-title="" title="">
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="portlet-body">
+
+
+                                                        <div class="col-md-4">
+                                                            <div class="top-news">
+                                                                <a href="javascript:;" onclick="VikorKararMatrisi();" class="btn purple">
+                                                                    <span>
+                                                                        Vikor ile Hesapla
+                                                                    </span>
+                                                                    <em>
+                                                                        <i class="fa fa-plus"></i>
+                                                                        Aynı alternatif, kriter ve ağırları üzerinden vikor için hesapla.
+                                                                    </em>
+                                                                    <i class="fa fa-globe top-news-icon"></i>
+                                                                </a>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top:20px;">
+                                                            <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="vikorinfo"><i class="fa fa-info"></i></a>
+                                                            <table class="table table-striped table-bordered table-hover" id="tblVikor"></table>
+                                                        </div>
+
+                                                        <div class="col-md-12" style="display:none;" id="btnVikor">
+
+                                                            <button class="btn grey-cascade btn-block" id="btnVikorMaxMin" onclick="VikorMaxMinHesapla(); sHesapla();" type="button"> Vikor Max/Min Hesapla </button>
+
+                                                        </div>     
+                                                        
+                                                        <div class="col-md-12" style="margin-top:20px;">
+                                                            <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="vikorinfo2"><i class="fa fa-info"></i></a>
+                                                            <table class="table table-striped table-bordered table-hover" id="tblMaxMin"></table>
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top:20px;">
+                                                            <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="vikorinfo3"><i class="fa fa-info"></i></a>
+                                                            <table class="table table-striped table-bordered table-hover" id="tblSR"></table>
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top:20px;display:none;" id="vDegeriAlani">
+                                                           
+                                                            <h4 class="page-header">V Değerinin Belirlenmesi </h4>
+                                                            
+                                                                <div class="col-md-3">
+                                                                    <div class="input-group">
+                                                     <input type="text"  id="txtVdegeri" onkeypress="return isNumberKey(event,this)" autofocus placeholder="V Değerini Giriniz..." class="form-control">
+                                                                        <span class="input-group-btn">
+                                                                            <button class="btn purple" onclick="QHesapla();SRQSirala();Kosullar();" type="button">Ok</button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>                                                                                                   
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <h4 class="page-header"> </h4>
+                                                        </div>
+                                                       
+
+                                                                @*<div class="col-md-12"  id="btnQDegeri" style="display:none;margin-top:20px;" >
+                 <button class="btn grey-cascade btn-block" id="btnQ" onclick="QHesapla();" type="button"> Q Değerini Hesapla </button>
+                </div>*@
+
+                                                                <div class="col-md-12" style="margin-top:20px;">
+                                                                    <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="vikorinfo4"><i class="fa fa-info"></i></a>
+                                                                    <table class="table table-striped table-bordered table-hover" id="tblQ"></table>
+                                                                </div>
+
+                                                        <div class="col-md-12">
+                                                            <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="vikorinfo5"><i class="fa fa-info"></i></a>
+                                                        </div>
+                                                                <div class="col-md-4" style="margin-top:20px;">
+                                                                    
+                                                                    <table class="table table-striped table-bordered table-hover" id="tblSSiralama"></table>
+                                                                </div>
+
+                                                                <div class="col-md-4" style="margin-top:20px;">
+                                                                    <table class="table table-striped table-bordered table-hover" id="tblRSiralama"></table>
+                                                                </div>
+
+                                                                <div class="col-md-4" style="margin-top:20px;">
+                                                                    <table class="table table-striped table-bordered table-hover" id="tblQSiralama"></table>
+                                                                </div>
+                                                        <div class="col-md-12">
+                                                            <a href="javascript:;" style="display:none" class="btn btn-icon-only grey" data-toggle="popover" id="vikorinfo6"><i class="fa fa-info"></i></a>
+                                                        </div>
+                                                                <div class="col-md-6" style="display:none" id="kosullar">
+                                                                    <h4 class="page-header">1.Koşul (Kabul Edilebilir Avantaj)</h4>
+                                                                    <div class="ticket-line"></div>
+                                                                    <h4 id="dq"></h4>
+                                                                    <h4 id="kosulsonuc1"></h4>
+                                                                </div>
+
+
+                                                                <div class="col-md-6" style="display:none" id="kosullar2">
+                                                                    <h4 class="page-header">2.Koşul (Kabul Edilebilir İstikrar) </h4>
+                                                                    
+                                                                    <h4 id="eniyiAlt"></h4>
+                                                                    <h4 id="kosulsonuc2"></h4>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+
+                                    <div class="btn-set pull-right">
+                                        <a href="javascript:;" class="btn default button-previous">
+                                            <i class="m-icon-swapleft"></i> Geri
+                                        </a>
+                                        <a href="javascript:;" class="btn blue button-next">
+                                            Devam <i class="m-icon-swapright m-icon-white"></i>
+                                        </a>
+                                        <a href="javascript:;" class="btn green button-submit">
+                                            Tamamla <i class="m-icon-swapright m-icon-white"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('#ahpFormul1').popover({ title: "Karşılaştırma Matrisi", html: true, trigger: "click", content: "<h4> Karar Matrisi Hakkında </h4><img src='../assets/img/ahpF1.jpg' width='50%' height='50%' /> <p> Kriterler arası karşılaştırma matrisi,   boyutlu bir kare matristir. Bu matrisin köşegeni üzerindeki matris bileşenleri 1 değerini alır</p><p>Kriterlerin karşılaştırılması, birbirlerine göre sahip oldukları önem değerlerine göre birebir ve karşılıklı yapılır.</p><img src='../assets/img/ahpOnem.jpg' width='50%' height='0%'/><br /><h4> Hesaplamalar </h4> <p>Önem dereceleri matrislere karşılıklı olarak eklendikten sonra ,Öncelikle her sütundaki değerler alt alta toplanarak,sütun toplamları elde edilir.(Normalizasyon Hesapla)</p>", placement: "right," });
+
+    $('#ahpinfo1').popover({ title: "Normalize Matris", html: true, trigger: "click", content: "<h4> Normalizasyon Hesaplamaları </h4><p>Her bir matris elemanı kendi sütun toplamına bölünür. Her sütun için bu işlem gerçekleştirilir. Elde edilecek sonuç matrisi “normalize edilmiş” matrisidir.Normalize formülü : <br></p><img src='../assets/img/ahpNormalize.jpg' width='20%' height='20%'/> <h4> Ağırlık Hesaplamaları </h4><p>Aşağıdaki formül ile normalize edilmiş matrisin satır elemanlarının ortalaması hesaplanır.(Ağırlık Sütunu-W) Yani satır toplamları toplam kriter sayısına bölünerek ortalamalar elde edilir.<br /><img src='../assets/img/ahpAgirlik.jpg' width='20%' height='20%' /><br /> Bu ortalama değerler önem derecelerini yüzdeler olarak belirlemiş olur. Bu ortalamalar birbiri ile karşılaştırılan alternatiflerin öncelikleri konusunda bir tahmin sağlar.</p> ", placement: "right," });
+
+    $('#ahpinfo12').popover({ title: "Normalize Matris", html: true, trigger: "click", content: "<h4>Tutarlılık Hesapları </h4><p> AHP, Tutarlılık Oranı (CR) hesaplamasının özünü, kriter sayısı ile Temel Değer adı verilen (λ) bir katsayının karşılaştırılmasına dayandırmaktadır. λ’ nın hesaplanması için öncelikle A karşılaştırma matrisi ile W öncelik vektörünün matris çarpımından D sütun vektörü elde edilir.<br><img src='../assets/img/ahpD.jpg' width='90%' height='90%' /></p> <p>D sütun vektörü ile W sütun vektörünün karşılıklı elemanlarının bölümünden her bir değerlendirme kriterine ilişkin temel değer (E) elde edilir. Bu değerlerin aritmetik ortalaması ise karşılaştırmaya ilişkin temel değeri ( λ ) verir.</p><p>λ hesaplandıktan sonra Tutarlılık Göstergesi (CI), aşağıdaki formülünden yararlanarak hesaplanabilir</p> <img src='../assets/img/ahpCIR.jpg' width='40%' height='40%' /><p>Son aşamada ise CI, Random Gösterge (RI) olarak adlandırılan ve aşağıdaki tabloda gösterilen standart düzeltme değerine bölünerek  CR elde edilir.<p> <u> Hesaplanan CR değerinin 0.10 dan küçük olması karşılaştırmaların tutarlı olduğunu gösterir. 0.10’ dan büyük olması ya AHP’ deki bir hesaplama hatasını ya da karar vericinin karşılaştırmalarındaki tutarsızlığını gösterir.</u></p><br> <img src='../assets/img/tablo.jpg' width='80%' height='80%' />", placement: "right," });
+
+    $('#ahpinfo2').popover({ title: "Karşılaştırma Matrisi", html: true, trigger: "click", content: "<h4> Karşılaştırma Matrisleri </h4><p>Her bir kriter için alternatifler karşılaştırılır. Kriter karşılaştırmalarında yine ön görülen önem dereceleri üzerinden değerlendirmeler yapılır.</p><p> 'Normalizasyon Hesapla' işlemi gerçekleştirildiğinde her bir tablo için sütun toplamları hesaplanır.Hesaplanan normalizasyon tabloları ise 7 nolu işlemde listelenmiştir. Yani kriter hesaplamaları için gerçekleştirilen tüm işlemlerin aynısı gerçekleştirilir.  </p> ", placement: "right," });
+
+    $('#ahpinfo3').popover({ title: "Karşılaştırma Matrisi", html: true, trigger: "click", content: "<h4> Alternatif Matrisleri </h4><p>Alternatiflerin değerlendirme sonucunda elde edilen normalizasyon değerleri ve ağırlıkları tablolarda, tutarlılık oranları ise tabloların altında yer almaktadır.  </p> ", placement: "right," });
+
+    $('#ahpinfo4').popover({ title: "Sonuç Tablosu", html: true, trigger: "click", content: "<h4> Sonuç </h4><p>Sonuç tablosunda, satırlarda alternatif isimleri, sütunlarda kriter adları yer alan bir tablo içerisinde elden edilen alternatif ağırlıkları gösterilmiştir. Satırdaki her bir değer ile, kriter ağırlığının her bir değeri çarpılarak toplanır ve ilgili alternatif için sonuç elde edilmiş olur. En yüksek değer en iyi alternatif olarak işaretlenir.   </p> ", placement: "right," });
+
+    $('#topsisinfo1').popover({ title: "Topsis Hakkında", html: true, trigger: "click", content: "<h4> Topsis Yöntemi </h4><p> TOPSIS yöntemi kullanıcısından az sayıda girdi parametresi alırken çıktılarının anlaşılması oldukça kolaydır. TOPSIS yöntemi ile karar verirken seçilen bir alternatin ideal çözüme yakın olması ve ideal olmayan çözüme(negatif ideal) de uzak olması beklenir(Lai ve diğerleri, 1994). Eğer amacımız getiri ise ideal çözüme yakınlık demek getirinin maksimizasyonu, negatif ideal çözüme uzaklık ise maliyetin minimizasyonu anlamına gelmektedir. Arzulanan alternatin ideal çözüme yakınlığı beklenirken bir o kadar da negatif ideal çözümden uzak olması beklenir.</p><p> <Bir başka ifade ile TOPSİS ile alternatier içinden ideal olan çözüme yakın, negatif ideal çözüme uzak olanı seçilir. Örneğin aşağıda yer alan şekilde(Ishizaka ve Nemery, 2013) X ve Y gibi iki alternatif söz konusu olsun; burada alternatierden X’in ideal çözüme yakın olması ve aynı şekilde negatif ideal çözümden uzak olması Y’ye göre X’in tercih edilme sebebidir. Y’nin X’e göre ideal çözümden uzak olması ve aynı zamanda negatif ideal çözüme yakın olması karar verici açısından Y’nin tercih edilmeme sebebidir. </p> ", placement: "right," });
+
+   
+
+    $('#topsisinfo2').popover({ title: "Topsis Hesaplama", html: true, trigger: "click", content: "<h4> 1-Karar Matrisinin Oluşturulması </h4><p>Karar matrisi karar verici tarafından oluşturulması gereken bir matristir. Oluşturulan bu matris mxp boyutlu bir matris olacaktır. Karar verici satırlarda karar noktalarını gösterirken sütunlarda ise faktörlere yer verir. Bu matris aşağıdaki gibi gösterilebilir;</p><br><img src='../assets/img/topsisKararMatrisi.jpg' width='50%' height='50%' /> ", placement: "right," });
+
+    $('#topsisinfo3').popover({ title: "Topsis Hesaplama", html: true, trigger: "click", content: "<h4> 2-Normalize Matrisin Elde Edilmesi </h4><p>Karar matrisi oluşturulduktan sonra her bir a değerlerinin(a ,a ,a …a ) kareleri alınarak bu değerlerin toplamından oluşan sütun toplamları elde edilir ve her bir a değeri ait olduğu sütun toplamının kareköküne bölünerek normalizasyon işlemi gerçekleştirilir.</p><br><img src='../assets/img/topsisNormalize.jpg' width='50%' height='50%' /> ", placement: "right," });
+
+    $('#topsisinfo4').popover({ title: "Topsis Hesaplama", html: true, trigger: "click", content: "<h4> 3-Ağırlıklandırılmış Normalize Matrisin Elde Edilmesi </h4><p>Normalize edilmiş matrise ait her bir değer w<sub>ij</sub> gibi bir değerle ağırlıklandırılır. Ağırlıklandırma işlemi TOPSIS yönteminin sübjektif yönünü ortaya koymaktadır. Çünkü ağırlıklandırma işlemi faktörlerin önem derecesine göre yapılmaktadır. TOPSIS yönteminin tek sübjektif parametresi ağırlıklardır. Burada dikkat edilmesi gereken husus w<sub>ij</sub> değer toplamlarının 1’ eşit olmasıdır. </p><br><img src='../assets/img/topsis3.jpg'  /><br> <p> Normalize matris ile elde edilen n<sub>ij</sub> değerleri w<sub>ij</sub> ağırlıkları ile çarpılarak ağırlıklandırılmış normalize matris(V matrisi) elde edilir.</p><br> <img src='../assets/img/topsis4.jpg' width='80%' height='80%'  />", placement: "right," });
+
+    $('#topsisinfo5').popover({ title: "Topsis Hesaplama", html: true, trigger: "click", content: "<h4> 4-İdeal ve Negatif İdeal Çözüm Değerlerinin Elde Edilmesi </h4><p>Ağırlıklandırılmış normalize matris(V matrisi) elde edildikten sonra problemin yapısına bağlı kalmak koşuluyla yani amacımız maksimizasyon ise her bir sütuna ait maksimum değerler tespit edilir. Bu maksimum değerler ideal çözüm değerlerimizdir. Daha sonra ise yine her bir sütuna ait minimum değerler elde edilir. Bu da negatif ideal çözüm değerleridir. Eğer amacımız minimizasyon ise elde edilen değerler tam tersi olacaktır. İdeal ve negatif ideal çözüm değerlerinin elde edilmesi ile ilgili notasyon aşağıdaki gibi gösterilmiştir</p><p>İdeal çözüm değerleri:</p><br><img src='../assets/img/ideal.jpg' width='80%' height='80%'  /><br><p>Negatif İdeal çözüm değerleri:</p><br><img src='../assets/img/negatifideal.jpg' width='80%' height='80%'  />", placement: "right," });
+
+    $('#topsisinfo6').popover({ title: "Topsis Hesaplama", html: true, trigger: "click", content: "<h4> 5-İdeal ve Negatif İdeal Noktalara Olan Uzaklık Değerlerinin Elde Edilmesi </h4><p>Her bir alternatife ilişkin karşılaştırma kriteri değerlendirmesinin bulunurken pozitif ve negatif ideal çözüm kümesinden uzaklıklar Euclidian uzaklık yaklaşımı ile hesaplanır. Elde edilen alternatiflerin kriterlere ilişkin sapma değerleri Pozitif İdeal Ayırım (Si*) ve Negatif İdeal Ayırım (Si-) ölçüsü olarak adlandırılır.</p><br><img src='../assets/img/topsis5.jpg' width='80%' height='80%'  /> ", placement: "right," });
+
+    $('#topsisinfo7').popover({ title: "Topsis Hesaplama", html: true, trigger: "click", content: "<h4> 6-İdeal Çözüme Göreli Yakınlığın Hesaplanması </h4><p>Her bir karar noktasının ideal çözüme göreli yakınlığının hesaplanmasında ideal ve ideal olmayan noktalara uzaklıklardan yararlanılır. İdeal çözüme göreli yakınlık C<sup>*</sup><sub>i</sub> ile sembolize edilir.Burada C<sup>*</sup><sub>i</sub> değeri  0 ≤ C<sup>*</sup><sub>i</sub> ≤ 1  aralığında değer alır ve C<sup>*</sup><sub>i</sub> = 1 ilgili karar noktasının ideal çözüme mutlak çözüm yakınlığını gösterirken,  C<sup>*</sup><sub>i</sub> = 0 ise ilgili karar noktasının negatif ideal çözüme mutlak yakınlığını gösterir.</p> <br> <img src='../assets/img/topsis6.jpg'  />    ", placement: "right," });
+
+
+    $('#vikorinfo').popover({ title: "Vikor Yöntemi", html: true, trigger: "click", content: "<h4> Karar Matrisi </h4><p>Ahp'de hesaplanan ağırlık değerleri ve Topsis'de elde edilen Karar Matrisi Vikor hesaplamalarında kullanılacaktır. Tablo da yer alan veriler Topsis'den elde edilen karar matris verilerine aittir.  </p>   ", placement: "right," });
+
+    $('#vikorinfo1').popover({ title: "Vikor Hakkında", html: true, trigger: "click", content: "<h4>Vikor Yöntemi </h4><p>VlseKriterijumska Optimizacija I Kompromisno Resenje (VIKOR) yöntemi çok kriterli kompleks sistemlerin optimizasyonu için geliştirilmiştir (Tzeng and Huang, 2011, 71). Yu (1973) ve Zeleny (1982) tarafından temelleri atılan uzlaşık çözüm (compromise solution), birbiriyle çelişen kriterlerin yer aldığı bir karar verme probleminde ortak bir uzlaşma ile anlaşmaya varmak anlamına gelmekte ve ideale en yakin uygun alternatif çözümü vermektedir</p> <p>Uzlaşmacı sıralama Vikor yöntemi çoğunluk için maksimum 'grup faydası'  ve aleyhinde minimum bireysel pişmanlık sağlayan,  ideale yakın, uzlaşılan bir çözüm, belirler. Alternatiflerin her bir kritere göre değerlendirildiği varsayıldığında, uzlaşma sıralaması ideal çözüm yakınlık ölçüsü karşılaştırılarak gerçekleştirilir. </p>   ", placement: "right," });
+
+
+  
+
+    $('#vikorinfo2').popover({ title: "Vikor Hesaplama", html: true, trigger: "click", content: "<h4> 1-En İyi (fi*) ve En Kötü (fi-) Değerleri’nin Bulunması</h4><p>Vikor yönteminin ilk basamağı olarak en iyi (fi*) ve en kötü (fi-) değerleri belirlenir. Aşağıda gösterilen formüllerde; i karşılaştırma kriterlerini (i=1,2,3,…,n) ve j alternatifleri (j=1,2,3,…,m) göstermektir. (8) ve (9) numaralı formüller yardımıyla her bir kriter için en iyi (fi*) ve en kötü (fi-) değerler belirlenir. </p> <br> <img src='../assets/img/vikor1.jpg'  />    ", placement: "right," });
+
+    $('#vikorinfo3').popover({ title: "Vikor Hesaplama", html: true, trigger: "click", content: "<h4> 2-Sj ve Rj Değerleri’nin Hesaplanması </h4><p>Her bir kriter için en iyi (fi*) ve en kötü (fi-) değerleri hesaplandıktan sonra her bir alternatif için Sj ve Rj değerleri hesaplanır. Aşağıdaki formüllerle hesaplanan Sj değeri ortalama grup, Rj ise en kötü grup değerini gösterir.  </p> <br> <img src='../assets/img/vikor2.jpg' width='80%' height='80%'   />    ", placement: "right," });
+
+    $('#vikorinfo4').popover({ title: "Vikor Hesaplama", html: true, trigger: "click", content: "<h4> 3- Qj Değerleri’nin Hesaplanması  </h4><p>Her bir alternatif için aşağıdaki  formül yardımıyla değerlendirme kriterlerine göre belirlenen Qj değerleri, maksimum grup faydasını gösterir.  </p> <br> <img src='../assets/img/vikor3.jpg'  />  <br><p>Yukarıdaki formülde gösterilen S* ve R* minimum Sj ve Rj değerlerini, S- ve R- maksimum Sj ve Rj değerlerini göstermektedir. Kullanılan formüldeki v değeri maksimum grup faydasını yaratacak strateji için ağırlık değerini, fakat (1-v) değeri ise karşıt görüşteki karar vericilerin minimum pişmanlığını ifade etmektedir. Vikor yönteminde maksimum grup faydası için v > 0,5 çoğunluk tercihini, v=0,5 konsesusu (uyuşma) ve v < 0,5 vetoyu temsil etmektedir ve bu v değeri grup kararı ile belirlenmektedir. </p>  ", placement: "right," });
+
+    $('#vikorinfo5').popover({ title: "Vikor Hesaplama", html: true, trigger: "click", content: "<h4> 4-Sj, Rj ve Qj Değerleri’nin Sıralanması  </h4><p>Her bir alternatif için hesaplanan Sj, Rj ve Qj değerleri küçükten büyüğe olacak şekilde sıralanır.En küçük Qj değerine sahip alternatif yada değerlendirme birimi, alternatifler grubu içerisindeki en iyi seçenek olarak ifade edilir.  </p>   ", placement: "right," });
+
+    $('#vikorinfo6').popover({ title: "Vikor Hesaplama", html: true, trigger: "click", content: "<h4> 5-Koşulların Sağlanması </h4><p>Sj, Rj ve Qj değerlerinin sıralaması göre karar vericiler için kabul edilebilir avantaj (C1) ve kabul edilebilir istikrar (C2) kümeleri belirlenir. Herhangi bir alternatifin C1 (Kabul Edilebilir Avantaj) kümesinde yer alabilmesi için aşağıdaki formülde gösterilen koşulu sağlaması gerekir.  </p> <br><img src='../assets/img/vikor4.jpg'  /> <br><p>Gösterilen formüldeki DQ değeri, m alternatif sayısı olmak üzere (1/(1-m)) ile hesaplanır. Qj sıralamasına göre A2 alternatifi A1 alternatifinden sonraki sırada yer alıyorsa ve  yukarıdaki formülde gösterilen koşul sağlanıyorsa A1 karar noktası C1 grubunda yer alır. Bu hesaplama yöntemi tüm Qj değerlerine uygulanıp alternatiflerin hangilerinin C1 kümesinde olup olmadığı tespit edilir. Kabul edilebilir istikrar (C2) kümesi ise Sj, Rj ve Qj sıralamalarının tamamında aynı sırada yer alan alternatiflerden oluşur. C1 ve C2 kümelerinin her ikisinde yer alan alternatifler sıralama mantığına göre istikrarlı karar noktalarını gösterir. </p>  ", placement: "right," });
+    
+});
+</script>

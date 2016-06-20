@@ -1,0 +1,253 @@
+﻿
+@{
+    ViewBag.Title = "Topsis";
+    Layout = "~/Views/Shared/MasterPage.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet box blue" id="form_wizard_1">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-list"></i> Topsis (Technique for Order of Preference by Similarity to Ideal Solution) / <span class="step-title">
+                        Step 1 of 8
+                    </span>
+                </div>
+               
+            </div>
+            <div class="portlet-body form">
+                <form action="#" class="form-horizontal" id="submit_form" method="POST">
+                    <div class="form-wizard">
+                        <div class="form-body">
+                            <ul class="nav nav-pills nav-justified steps">
+                                <li>
+                                    <a href="#tab1" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            1
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Kriterleri Belirleme
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab2" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            2
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Alternatifleri Belirleme
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab3" data-toggle="tab" class="step active">
+                                        <span class="number">
+                                            3
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Normalize Matris
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab4" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            4
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Ağırlıklandırılmış Normalize Matris
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab5" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            5
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i>İdeal ve Negatif Uzaklıklar
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#tab6" data-toggle="tab" class="step">
+                                        <span class="number">
+                                            6
+                                        </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> Sonuç
+                                        </span>
+                                    </a>
+                                </li>                                                               
+
+                            </ul>
+                            <div id="bar" class="progress progress-striped" role="progressbar">
+                                <div class="progress-bar progress-bar-success">
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="alert alert-success display-none">
+                                    <button class="close" data-dismiss="alert"></button>
+                                    Your form validation is successful!
+                                </div>
+                                <div class="tab-pane active" id="tab1">
+
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <div class="col-md-6  col-md-offset-3">
+                                                <div class="col-md-12">
+                                                    <div class="col-md-12">
+                                                        <a id="adder" onclick="TopsisAddKriter();" class="btn default blue-stripe"><i class="fa fa-plus"></i> Kriter Ekle </a>
+                                                    </div>
+                                                    <div id="Kriterinputs" class="col-md-12">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane" id="tab2">
+                                    <div class="form-body" >
+                                        <div class="form-group">
+                                            <div class="col-md-6  col-md-offset-3">
+                                                <div class="col-md-12">
+                                                    <div class="col-md-12">
+                                                        <a id="adder" onclick="TopsisAddAlternatif();" class="btn default blue-stripe"><i class="fa fa-plus"></i> Alternatif Ekle </a>
+                                                    </div>
+                                                    <div id="TopsisAlternatifinputs" class="col-md-12">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="tab3">
+
+
+                                    <div class="form-body" id="tblKriterHesapla">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                         
+                                                    <button class="btn grey-cascade btn-block " id="btnNormalizasyon" onclick="TopsisKriterleriKaydet();" type="button"><i class="fa fa-calculator"></i>Karar Matrisini Oluştur</button>
+                                                
+                                            </div>
+
+                                            <div class="col-md-12" style="margin-top:20px;">
+                                                <table class="table table-striped table-bordered table-hover" id="tblTopsis"></table>
+                                            </div>
+                                            <div class="col-md-12" style="display:none;" id="btntopnorm">
+                                               
+                                                    <button class="btn grey-cascade btn-block" id="btnTopsisNormalizasyon" onclick="TopsisNormalizasyon();" type="button"> Normalizasyon Hesapla </button>
+                                            
+                                            </div>
+                                            <div class="col-md-12" style="margin-top:10px;">
+                                                <table class="table table-striped table-bordered table-hover" id="tblTopsisKaresi"></table>
+                                            </div>
+
+                                            <div class="col-md-12" style="margin-top:10px;">
+                                                <table class="table table-striped table-bordered table-hover" id="tblTopsisNorm"></table>
+                                            </div>
+
+                                           
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab4">
+                                    <div class="form-body">
+                                        <div class="form-group">
+
+                                            <div class="col-md-12" style="display:none" id="btntopagrnorm">
+
+                                           <button class="btn grey-cascade btn-block" id="btnTopsisAgirNormalizasyon" onclick="TopsisAgirNormalizasyon();" type="button"> Ağırlıklandırılmış Normalizasyon Hesapla</button>
+
+                                            </div>
+
+                                            <div class="col-md-12" style="margin-top:15px;">
+                                                <table class="table table-striped table-bordered table-hover" id="tblAgirlik4"></table>
+                                            </div>
+
+                                            <div class="col-md-12" style="margin-top:15px;">
+                                                <table class="table table-striped table-bordered table-hover" id="tblAgirlikliNormalizasyon"></table>
+                                            </div>
+
+                                            <div class="col-md-12" style="margin-top:15px;">
+                                                <table class="table table-striped table-bordered table-hover" id="tblIdeal"></table>
+                                            </div>
+
+                                            
+                                            <div class="clear"></div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane active" id="tab5">
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                       <button class="btn grey-cascade btn-block " id="btnUzaklik" onclick="UzaklikBul();" type="button">  İdeal ve İdeal Olmayan Noktalara Olan Uzaklık Değerlerini Hesapla</button>
+                                            </div>
+
+                                            
+
+                                            <div class="col-md-12" style="margin-top:15px;">
+                                                <table class="table table-striped table-bordered table-hover" id="tblUzaklik"></table>
+                                            </div>
+
+                                            <div class="col-md-12" style="margin-top:15px;">
+                                                <table class="table table-striped table-bordered table-hover" id="tblUzaklikNegatif"></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane" id="tab6">
+
+
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <button class="btn grey-cascade btn-block" id="btnSonuc" onclick="Sonuc();" type="button">  Sonuc</button>
+                                            </div>
+
+                                            <div class="col-md-12" style="margin-top:15px;">
+                                                <table class="table table-striped table-bordered table-hover" id="tblSonuc"></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                               
+
+                                <div class="form-actions">
+
+                                    <div class="btn-set pull-right">
+                                        <a href="javascript:;" class="btn default button-previous">
+                                            <i class="m-icon-swapleft"></i> Geri
+                                        </a>
+                                        <a href="javascript:;" class="btn blue button-next">
+                                            Devam <i class="m-icon-swapright m-icon-white"></i>
+                                        </a>
+                                        <a href="javascript:;" class="btn green button-submit">
+                                            Tamamla <i class="m-icon-swapright m-icon-white"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,143 @@
+﻿@using System.Web.Optimization;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+    <title>Multiple-Criteria Decision Analysis</title>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/metronic")  
+    @Scripts.Render("~/bundles/mcda")        
+    @Styles.Render("~/Content/css")
+    
+</head>
+
+
+
+
+    <body class="page-header-fixed page-quick-sidebar-over-content page-sidebar-closed ">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="~/Home/Index">
+                        <img src="~/assets/admin/layout/img/Sakaryalogo.png" width="172" height="28"  alt="logo" class="logo-default" />
+                    </a>
+                    
+                </div>
+                <!-- END LOGO -->
+               
+               
+
+
+                <!-- BEGIN PAGE ACTIONS -->
+                <!-- DOC: Remove "hide" class to enable the page header actions -->
+                <div class="page-toolbar" >
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn blue btn-lg btn-outline dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            Menü
+                            <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li>
+                                <a href="~/Home/Ahp">
+                                    <i class="icon-bell"></i> AHP
+                                </a>
+                            </li>
+                            @*<li>
+                                <a href="#">
+                                    <i class="icon-shield"></i> Topsis
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-user"></i> Something else here
+                                </a>
+                            </li>
+                            <li class="divider"> </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-bag"></i> Separated link
+                                </a>
+                            </li>*@
+                        </ul>
+                    </div>
+                </div>
+                <!-- END PAGE ACTIONS -->
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+           
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                       
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <div class="clearfix">
+        </div>
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <!-- BEGIN PAGE HEADER-->
+                    <!-- BEGIN PAGE HEAD -->
+                    <div class="page-head">
+                        <!-- BEGIN PAGE TITLE -->
+                        <div class="page-title">
+                            @*<h1>  MCDA <small>Multiple-Criteria Decision Analysis</small></h1>*@
+                        </div>
+                        <!-- END PAGE TITLE -->
+                       
+                    </div>
+                    <!-- END PAGE HEAD -->
+                  
+                    <!-- END PAGE HEADER-->
+                    <!-- BEGIN PAGE CONTENT-->
+                    @RenderBody()
+                    <!-- END PAGE CONTENT-->
+                </div>
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner">
+                software developer by <a href="http://www.ahmetsonmez.net" target="_blank">ahmet sönmez</a>
+                
+            </div>
+            <div class="scroll-to-top">
+                2016 &copy; Sakarya Üniversitesi Bilişim Sistemleri - Proje Ödevi
+            </div>
+        </div>
+        <script>
+            jQuery(document).ready(function() {
+               // initiate layout and plugins
+               Metronic.init(); // init metronic core components
+            Layout.init(); // init current layout            
+               FormWizard.init();
+            });
+        </script>
+
+
+    </body>
+    
+
+
+</html>
