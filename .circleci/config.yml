@@ -4,11 +4,11 @@ orbs:
   netsparker: netsparker/scan@dev:alpha
 
 jobs:
-  scan:
+  scantest:
     executor: ci-base
     steps:
     - run: exit 0 # toggle this to force success or status for testing
     - netsparker/scan:
-        website_id: ${fb7b775f1e7149659f6daa8002bb56b0}
-        api_url: ${https://www.netsparkercloud.com}
-        scanProfile_id: ${c6558edc-e37c-4304-1588-aacd02cfea77}
+        website_id: fb7b775f1e7149659f6daa8002bb56b0
+        api_url: https://www.netsparkercloud.com
+        scanProfile_id: c6558edc-e37c-4304-1588-aacd02cfea77
