@@ -9,6 +9,6 @@ jobs:
     steps:
     - run: exit 0 # toggle this to force success or status for testing
     - netsparker/scan:
-        website_id: ${NETSPARKER_WEBSITE_ID}
-        api_url: ${NETSPARKER_API_URL}
-        scanProfile_id: ${NETSPARKER_SCANPROFILE_ID}
+        website_id: ${fb7b775f1e7149659f6daa8002bb56b0}
+        api_url: ${https://www.netsparkercloud.com}
+        scanProfile_id: ${c6558edc-e37c-4304-1588-aacd02cfea77}
