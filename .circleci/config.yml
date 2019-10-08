@@ -14,7 +14,7 @@ jobs:
         scanProfile_id: c6558edc-e37c-4304-1588-aacd02cfea77
         scan_type: FullWithPrimaryProfile
 workflows:
-  example-workflow:
+  scan-workflow:
     jobs:
       - scantest:
       - netsparker/scan:
