@@ -16,6 +16,8 @@ jobs:
 workflows:
   scan-workflow:
     jobs:
-      - scantest:
       - netsparker/scan:
-          scanProfile_id: ""
+          website_id: 08eb847c-954e-4027-0372-aa71029c1ee6
+          api_url: https://32ae3f77.ngrok.io
+          scanProfile_id: c6558edc-e37c-4304-1588-aacd02cfea77
+          scan_type: FullWithPrimaryProfile
