@@ -5,7 +5,6 @@ orbs:
 
 workflows:
   scan-workflow:
-    jobs:
       scantest:
         executor: ci-base
         steps:
