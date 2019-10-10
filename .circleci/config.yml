@@ -9,8 +9,6 @@ workflows:
     jobs:
       scantest:
         executor: ci-base
-          steps:
-          - run: exit 0 # toggle this to force success or status for testing
           - netsparker/scan:
               website_id: 9474e2c4-1ec3-40b0-420c-aa7602ffeb3e
               api_url: https://688c3162.ngrok.io
