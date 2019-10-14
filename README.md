@@ -1,10 +1,13 @@
-## Bütünleşik Ahp-Topsis-Vikor Uygulaması
+## Multiple Criteria Decision Analysis
 
-### Özet
+### Summary
 
-Çok kriterli karar verme yöntemleri; karar vericinin belirsizlik, karmaşıklık ve birbiriyle çelişen amaçların olduğu hallerde uygun seçenekler oluşturarak daha iyi karar vermesine yardımcı olmaktadır. Analitik Hiyerarşi Süreci (Analytic Hierarchy Process-AHP) ,Topsis (Technique for Order Preference by Similarity to Ideal Solution) ve Vikor (VlseKriterijumska Optimizacija I Kompromisno Resenje) oldukça fazla kullanılan çok kriterli karar verme yöntemlerindendirler. 
+Multi-criteria decision making methods; it helps decision-makers make better decisions by creating appropriate options where uncertainty, complexity, and conflicting objectives exist. Analytic Hierarchy Process (AHP), Topsis (VlseKriterijumska Optimizacija I Kompromisno Resenje) and Vikor are the most widely used multi-criteria decision making methods.
 
-### Uygulama Hakkında
-Bu uygulama, Sakarya Üniversitesi Fen Bilimleri Enstitüsü  Bilişim Sistemleri "Proje Ödevi" olarak geliştirilmiştir. Uygulama içeriğini oluşturan Ahp,Topsis ve Vikor ile iglili teknik dökümanlara ve uygulamaya http://mcda.azurewebsites.net/ adresi üzerinden erişebilirsiniz.
+![mcda1](https://user-images.githubusercontent.com/20044226/66745189-0695ff80-ee87-11e9-9e13-c4e861edac62.PNG)
 
-Yukarıda bahsedilen yapılar (Ahp-Topsis-Vikor) aklınıza gelebilecek tüm alanlarda kullanılmak ile beraber daha çok endüstri mühendisliği alanında kullanılmaktadır. Uygulamaların anlaşılması, hesaplamaların daha hızlı gerçekleştirilmesi ve aynı zamanda uygulamanın diğer yazılımcı arkadaşlar tarafından da geliştirilmesi  amacıyla Github'a konulmuştur. 
+
+### About
+This application has been developed as Sakarya University Institute of Science Information Systems "Project Homework". You can access the technical documentation and application of Ahp, Topsis and Vikor via http://mcda.azurewebsites.net/.
+
+The above-mentioned structures (Ahp-Topsis-Vikor) are used in all areas you can think of, but are mostly used in the field of industrial engineering. It was put into Github for the purpose of understanding the applications, making the calculations faster, and also developing the application by other developers.
