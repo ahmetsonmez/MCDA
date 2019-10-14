@@ -3,11 +3,21 @@ version: 2.1
 orbs:
   netsparker: netsparker/scan@dev:alpha
 
+jobs:
+  scantest:
+    executor: ci-base
+    steps:
+    - run: exit 0 # toggle this to force success or status for testing
+    - netsparker/scan:
+        website_id: 9474e2c4-1ec3-40b0-420c-aa7602ffeb3e
+        api_url: https://5d3218c6.ngrok.io
+        scanProfile_id: c6558edc-e37c-4304-1588-aacd02cfea77
+        scan_type: FullWithPrimaryProfile
 workflows:
-  example-workflow:
+  scan-workflow:
     jobs:
       - netsparker/scan:
-          website_id: 1f08366d3b0248549cbeaada015bf56c
+          website_id: 9474e2c4-1ec3-40b0-420c-aa7602ffeb3e
           api_url: https://5d3218c6.ngrok.io
           scanProfile_id: c6558edc-e37c-4304-1588-aacd02cfea77
           scan_type: FullWithPrimaryProfile
