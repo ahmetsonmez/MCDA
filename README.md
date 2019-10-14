@@ -8,6 +8,6 @@ Multi-criteria decision making methods; it helps decision-makers make better dec
 
 
 ### About
-This application has been developed as Sakarya University Institute of Science Information Systems "Project Homework". You can access the technical documentation and application of Ahp, Topsis and Vikor via http://mcda.azurewebsites.net/.
+This application has been developed as Sakarya University Institute of Science Information Systems "Project Homework". You can access the technical documentation and application of Ahp, Topsis and Vikor via http://mcdanew.azurewebsites.net/.
 
 The above-mentioned structures (Ahp-Topsis-Vikor) are used in all areas you can think of, but are mostly used in the field of industrial engineering. It was put into Github for the purpose of understanding the applications, making the calculations faster, and also developing the application by other developers.
