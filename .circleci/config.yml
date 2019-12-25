@@ -8,5 +8,5 @@ workflows:
     jobs:
       - netsparker/scan:
           website_id: 08eb847c-954e-4027-0372-aa71029c1ee6
-          api_url: https://b6e595d8.ngrok.io          
+          api_url: https://www.netsparkercloud.com          
           scan_type: FullWithPrimaryProfile
